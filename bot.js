@@ -30,7 +30,7 @@ client.on('ready', () => {
 
 client.on('ready', () => {
 
-    client.user.setActivity("$help | Beta V.0.0.1",{type: 'Streaming'})
+    client.user.setActivity("%help | Beta V.0.0.1",{type: 'Streaming'})
 
 });
 
@@ -1484,32 +1484,7 @@ if(message.content == prefix+"عواصم"){
                                     
                                      
                                         
-                                     message.channel.sendEmbed(embed);
-                                       }
-                                   });
-
-
-                                   client.on('message', message => {
-                                    var prefix = "%";
-                            if (message.author.bot) return;
-                            if (!message.content.startsWith(prefix)) return;
-                        
-                            let command = message.content.split(" ")[0];
-                            command = command.slice(prefix.length);
-                        
-                            let args = message.content.split(" ").slice(1);
-                        
-                            if (command == "embed") {
-                                if (!message.channel.guild) return message.reply('** This command only for servers **');
-                                let say = new Discord.RichEmbed()
-                                    .addField('Emebad:', `${message.author.username}#${message.author.discriminator}`)
-                                    .setDescription(args.join("  "))
-                                    .setColor(0x23b2d6)
-                                message.channel.sendEmbed(say);
-                                message.delete();
-                            }
-                        });
-
+                                     
 
                         client.on("message", message => {
                             var prefix = "%"
